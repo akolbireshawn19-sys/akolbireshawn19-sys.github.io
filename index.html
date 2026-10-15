@@ -456,6 +456,129 @@ footer {
 document.getElementById("year").textContent =
     new Date().getFullYear();
 </script>
+<style>
+/* CELESTIAL GLASS — SHAWN AKOLBIRE */
 
+:root {
+  --celestial-blue: #9bdcff;
+  --celestial-violet: #c9b6ff;
+  --glass-white: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.28);
+}
+
+body {
+  background-color: #07172d;
+  background-image:
+    radial-gradient(ellipse at 15% 10%, rgba(83, 159, 255, 0.22), transparent 45%),
+    radial-gradient(ellipse at 85% 35%, rgba(177, 128, 255, 0.16), transparent 40%);
+  background-attachment: fixed;
+}
+
+header,
+nav,
+section,
+footer,
+.card,
+.button {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+header {
+  background: rgba(8, 24, 52, 0.76) !important;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+nav a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--celestial-blue);
+  text-shadow: 0 0 16px rgba(155, 220, 255, 0.8);
+}
+
+section {
+  position: relative;
+  border-color: var(--glass-border);
+}
+
+section:not(:first-child) {
+  margin: 28px 0;
+  padding: 30px;
+  border: 1px solid var(--glass-border);
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.025)
+  );
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+h1, h2, h3 {
+  text-shadow: 0 0 28px rgba(155, 220, 255, 0.14);
+}
+
+h2 {
+  color: var(--celestial-blue);
+}
+
+.button,
+a.button {
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(155, 220, 255, 0.09)
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover,
+a.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 34px rgba(92, 177, 255, 0.22);
+}
+
+footer {
+  border-top: 1px solid var(--glass-border);
+  background: rgba(8, 24, 52, 0.45);
+}
+
+::selection {
+  color: #07172d;
+  background: var(--celestial-blue);
+}
+
+@media (max-width: 600px) {
+  section:not(:first-child) {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  h1 {
+    animation: celestialGlow 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes celestialGlow {
+    from {
+      text-shadow: 0 0 12px rgba(155, 220, 255, 0.08);
+    }
+    to {
+      text-shadow: 0 0 28px rgba(155, 220, 255, 0.3);
+    }
+  }
+}
+</style>
 </body>
 </html>
