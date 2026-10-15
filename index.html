@@ -1,584 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#102c50">
-<meta name="description" content="The personal portfolio of Apambila Shawn Akolbire, an aspiring communications and public relations professional.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shawn Akolbire | Personal Portfolio</title>
+  <title>Apambila Shawn Akolbire | PR & Communications</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <meta name="description"
+        content="The professional portfolio of Apambila Shawn Akolbire, an aspiring Public Relations professional interested in communications, leadership and creative strategy.">
 
-html {
-    scroll-behavior: smooth;
-}
+  <meta name="theme-color" content="#080808">
 
-body {
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    background: #102c50;
-    line-height: 1.7;
-}
+  <style>
+    :root {
+      --black: #080808;
+      --dark: #111111;
+      --gold: #d4af37;
+      --light-gold: #f3d77a;
+      --white: #f7f5ef;
+      --muted: #b8b5ad;
+      --border: rgba(212, 175, 55, 0.25);
+    }
 
-:root {
-    --glass: rgba(255, 255, 255, 0.12);
-    --border: rgba(255, 255, 255, 0.3);
-    --blue: #a8dcff;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.7;
+    }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding: 18px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    background: rgba(8, 28, 55, 0.75);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--border);
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.logo {
-    font-size: 19px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
 
-.logo span {
-    display: block;
-    color: var(--blue);
-    font-size: 10px;
-    letter-spacing: 3px;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav a {
-    font-size: 13px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--blue);
-}
-
-.hero {
-    min-height: 85vh;
-    padding: 90px 8%;
-    display: flex;
-    align-items: center;
-    background:
-      linear-gradient(90deg, rgba(5, 24, 49, 0.83), rgba(5, 24, 49, 0.18)),
-      url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85")
-      center/cover;
-}
-
-.hero-content {
-    max-width: 680px;
-}
-
-.eyebrow {
-    color: var(--blue);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: clamp(43px, 8vw, 82px);
-    line-height: 1.08;
-    margin: 18px 0;
-}
-
-h1 span {
-    color: var(--blue);
-}
-
-.hero p {
-    font-size: 17px;
-    max-width: 560px;
-    color: #e4f2ff;
-    margin-bottom: 25px;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 23px;
-    margin: 5px 8px 5px 0;
-    border: 1px solid var(--border);
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.17);
-    backdrop-filter: blur(12px);
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: rgba(168, 220, 255, 0.35);
-    transform: translateY(-3px);
-}
-
-section {
-    padding: 75px 8%;
-    scroll-margin-top: 85px;
-}
-
-.section-label {
-    color: var(--blue);
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 4px;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: clamp(28px, 5vw, 43px);
-    margin: 8px 0 20px;
-}
-
-.about {
-    background: linear-gradient(135deg, #183c65, #102744);
-}
-
-.glass-card {
-    padding: 28px;
-    background: var(--glass);
-    border: 1px solid var(--border);
-    border-radius: 22px;
-    backdrop-filter: blur(16px);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
-}
-
-.about-grid,
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 22px;
-    margin-top: 28px;
-}
-
-.card {
-    padding: 25px;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: var(--glass);
-    backdrop-filter: blur(12px);
-    transition: transform 0.3s, background 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.18);
-}
-
-.card h3 {
-    color: var(--blue);
-    margin-bottom: 10px;
-}
-
-.education {
-    background: linear-gradient(135deg, #102744, #214c72);
-}
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 25px;
-}
-
-.skill {
-    padding: 9px 17px;
-    border: 1px solid var(--border);
-    background: var(--glass);
-    border-radius: 30px;
-    font-size: 14px;
-}
-
-.projects {
-    background: linear-gradient(135deg, #173859, #0c203c);
-}
-
-.contact {
-    background:
-      linear-gradient(rgba(8, 28, 55, 0.86), rgba(8, 28, 55, 0.94)),
-      url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=80")
-      center/cover;
-}
-
-.contact a.email {
-    color: var(--blue);
-    text-decoration: underline;
-    overflow-wrap: anywhere;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #081a30;
-    color: #c8ddf2;
-    font-size: 13px;
-}
-
-@media (max-width: 650px) {
     header {
-        flex-direction: column;
-        padding: 15px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 8, 8, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
     }
 
     nav {
-        gap: 12px;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    nav a {
-        font-size: 12px;
+    .logo {
+      color: var(--gold);
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
     }
 
     .hero {
-        min-height: 75vh;
-        padding: 70px 7%;
-        background-position: center;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+      background:
+        radial-gradient(
+          ellipse at 85% 20%,
+          rgba(212, 175, 55, 0.13),
+          transparent 45%
+        );
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5.5rem);
+      line-height: 1.08;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .hero-description {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: #080808;
+    }
+
+    .button:hover {
+      background: var(--light-gold);
+      color: #080808;
+      transform: translateY(-2px);
     }
 
     section {
-        padding: 55px 7%;
+      padding: 85px 0;
+      scroll-margin-top: 75px;
     }
-}
-</style>
+
+    section:nth-of-type(even) {
+      background: var(--dark);
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 10px;
+    }
+
+    .section-heading p,
+    .body-copy {
+      color: var(--muted);
+      max-width: 750px;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin-top: 15px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .info-card,
+    .card {
+      background: #141414;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .info-card h3,
+    .card h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .info-card p,
+    .card p {
+      color: var(--muted);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      margin-top: 15px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .skill {
+      padding: 10px 16px;
+      background: #171717;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: var(--white);
+    }
+
+    .contact-box {
+      background: #141414;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 35px;
+      max-width: 760px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .contact-details {
+      margin-bottom: 25px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details p {
+      margin: 10px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px 16px;
+      }
+
+      .hero {
+        min-height: 75vh;
+        padding: 70px 0;
+      }
+
+      .about-grid,
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .contact-box {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <a href="#home" class="logo">
-        SA.
-        <span>COMMUNICATIONS · LEADERSHIP · IMPACT</span>
-    </a>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">SA.</a>
 
-    <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
+  <main>
 
-<section class="hero" id="home">
-    <div class="hero-content">
-        <div class="eyebrow">Welcome to my world</div>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">Communication · Creativity · Leadership</p>
 
         <h1>
-            APAMBILA<br>
-            SHAWN <span>AKOLBIRE.</span>
+          Apambila<br>
+          Shawn <span class="gold">Akolbire.</span>
         </h1>
 
-        <p>
-            Aspiring Public Relations Professional ·
-            Communications Enthusiast · Future Leader
+        <p class="hero-description">
+          Aspiring Public Relations Professional &
+          Public Relations and Communications Consultant.
+          Passionate about meaningful communication,
+          strategic thinking, leadership and building
+          connections that make a difference.
         </p>
 
-        <p>
-            I believe in the power of communication to inspire,
-            connect people, and create meaningful change.
-            This is my journey of learning, creativity, leadership,
-            and turning ideas into impact.
-        </p>
+        <div class="buttons">
+          <a class="button primary" href="#about">Discover My Story</a>
+          <a class="button" href="#contact">Let's Connect</a>
+        </div>
+      </div>
+    </section>
 
-        <a class="button" href="#about">Discover My Story ↓</a>
-        <a class="button" href="#contact">Let's Connect ↗</a>
-    </div>
-</section>
-
-<section class="about" id="about">
-    <div class="section-label">A little about me</div>
-    <h2>My Story. My Purpose.</h2>
-
-    <div class="glass-card">
-        <p>
-            My name is Apambila Shawn Akolbire. I am a student
-            pursuing Communication Studies with a Public Relations
-            focus at UniMAC. I am interested in communication,
-            leadership, creativity, and the ways people and
-            organisations connect.
-        </p>
-        <br>
-        <p>
-            I see every experience as an opportunity to learn,
-            improve, and contribute. My ambition is to develop
-            the knowledge and skills needed to become a respected
-            communications professional and make a positive impact.
-        </p>
-    </div>
-
-    <div class="about-grid">
-        <div class="card">
-            <h3>My Vision</h3>
-            <p>To become a communications professional who inspires trust and creates meaningful impact.</p>
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A Little About Me</p>
+          <h2>Purpose. <span class="gold">Vision. Impact.</span></h2>
+          <div class="gold-line"></div>
         </div>
 
-        <div class="card">
-            <h3>My Values</h3>
-            <p>Integrity, growth, creativity, teamwork, and purposeful leadership.</p>
+        <div class="about-grid">
+          <div class="body-copy">
+            <p>
+              I am Apambila Shawn Akolbire, an aspiring Public
+              Relations professional with a strong interest in
+              communication, public engagement, leadership and
+              creative problem-solving.
+            </p>
+
+            <br>
+
+            <p>
+              I believe communication is more than sharing
+              information. It is about building trust, understanding
+              people, managing relationships and communicating
+              ideas clearly and responsibly.
+            </p>
+
+            <br>
+
+            <p>
+              My goal is to develop the knowledge and practical
+              experience needed to contribute to organisations,
+              communities and brands through effective
+              communication and thoughtful public relations.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>My Professional Direction</h3>
+            <p>Public Relations</p>
+            <p>Corporate Communications</p>
+            <p>Media and Public Engagement</p>
+            <p>Leadership and Advocacy</p>
+            <p>Creative Campaign Development</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">My Academic Journey</p>
+          <h2>Education & <span class="gold">Growth.</span></h2>
+          <div class="gold-line"></div>
         </div>
 
-        <div class="card">
-            <h3>My Inspiration</h3>
-            <p>The beauty of creation reminds me to dream boldly, remain humble, and keep growing.</p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>University Education</h3>
+            <p><strong>University of Media, Arts and Communication (UniMAC)</strong></p>
+            <p>
+              Bachelor in Communication Studies
+              — Public Relations option.
+            </p>
+            <span class="tag">Communication Studies</span>
+          </article>
+
+          <article class="card">
+            <h3>Secondary Education</h3>
+            <p><strong>Azoka Memorial Senior High School</strong></p>
+            <p>
+              My secondary education contributed to the
+              academic foundation and personal development
+              that I continue to build upon.
+            </p>
+            <span class="tag">Academic Foundation</span>
+          </article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="education" id="education">
-    <div class="section-label">Where learning begins</div>
-    <h2>My Academic Journey</h2>
+    <section id="leadership">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Leadership & Service</p>
+          <h2>Leading with <span class="gold">Purpose.</span></h2>
+          <div class="gold-line"></div>
+        </div>
 
-    <div class="card-grid">
-        <article class="card">
-            <h3>UniMAC</h3>
-            <p><strong>Communication Studies</strong></p>
-            <p>Public Relations option</p>
-            <p>Developing knowledge in communication, media, and public relations.</p>
-        </article>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Sports Prefect</h3>
+            <p>
+              Served as a sports prefect in primary school,
+              gaining an early introduction to responsibility,
+              teamwork and student leadership.
+            </p>
+          </article>
 
-        <article class="card">
-            <h3>Azoka Memorial Senior High School</h3>
-            <p>My secondary education helped shape my learning journey and personal development.</p>
-        </article>
-    </div>
-</section>
+          <article class="card">
+            <h3>Student Leadership</h3>
+            <p>
+              Interested in student representation, constructive
+              dialogue, responsible leadership and initiatives
+              that contribute positively to the student community.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="skills">
-    <div class="section-label">Growing every day</div>
-    <h2>Skills & Interests</h2>
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Areas of Interest</p>
+          <h2>Skills & <span class="gold">Development.</span></h2>
+          <div class="gold-line"></div>
+        </div>
 
-    <p>
-        These are areas I am interested in developing through
-        education, practical experience, and personal growth.
-    </p>
-
-    <div class="skills">
-        <span class="skill">Communication</span>
-        <span class="skill">Public Relations</span>
-        <span class="skill">Leadership</span>
-        <span class="skill">Teamwork</span>
-        <span class="skill">Creative Thinking</span>
-        <span class="skill">Public Speaking</span>
-        <span class="skill">Digital Media</span>
-        <span class="skill">Content Creation</span>
-        <span class="skill">Problem Solving</span>
-    </div>
-</section>
-
-<section class="projects" id="projects">
-    <div class="section-label">Ideas into impact</div>
-    <h2>Projects & Future Possibilities</h2>
-
-    <p>
-        This space will grow as I complete university assignments,
-        communication campaigns, and creative projects.
-    </p>
-
-    <div class="card-grid">
-        <article class="card">
-            <h3>01 · PR Campaigns</h3>
-            <p>Public relations campaign concepts, audience engagement, and strategic communication.</p>
-        </article>
-
-        <article class="card">
-            <h3>02 · Media & Writing</h3>
-            <p>Articles, media materials, storytelling, and communication assignments.</p>
-        </article>
-
-        <article class="card">
-            <h3>03 · Leadership</h3>
-            <p>Leadership experiences and initiatives that encourage teamwork and positive change.</p>
-        </article>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <div class="section-label">Every great connection starts somewhere</div>
-    <h2>Let's Connect.</h2>
-
-    <div class="glass-card">
-        <p>
-            Have a project idea, a professional opportunity,
-            or a reason to connect? I would be happy to hear from you.
+        <p class="body-copy">
+          I am developing my abilities in the following areas
+          as I continue my academic and professional journey.
         </p>
 
-        <p style="margin-top:20px;">
-            <strong>Email:</strong>
-            <a class="email" href="mailto:YOUR-EMAIL@example.com">
-                Add your professional email
+        <div class="skills">
+          <span class="skill">Public Relations</span>
+          <span class="skill">Written Communication</span>
+          <span class="skill">Public Speaking</span>
+          <span class="skill">Teamwork</span>
+          <span class="skill">Leadership</span>
+          <span class="skill">Creative Thinking</span>
+          <span class="skill">Media Literacy</span>
+          <span class="skill">Strategic Communication</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">My Work</p>
+          <h2>Projects & <span class="gold">Portfolio.</span></h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <p class="body-copy" style="margin-bottom: 30px;">
+          This section will grow as I complete practical work,
+          university assignments and communications projects.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Public Relations Campaigns</h3>
+            <p>
+              A space for campaign concepts, audience research,
+              communication plans and public engagement ideas.
+            </p>
+            <span class="tag">Campaign Development</span>
+          </article>
+
+          <article class="card">
+            <h3>Media & Communication Projects</h3>
+            <p>
+              A collection of relevant academic assignments,
+              media analysis and communication-related work.
+            </p>
+            <span class="tag">Media & Communication</span>
+          </article>
+
+          <article class="card">
+            <h3>Leadership & Advocacy</h3>
+            <p>
+              A place to document leadership activities,
+              student initiatives and responsible advocacy.
+            </p>
+            <span class="tag">Leadership</span>
+          </article>
+
+          <article class="card">
+            <h3>Creative Concepts</h3>
+            <p>
+              Ideas for branding, storytelling, public awareness
+              and effective communication.
+            </p>
+            <span class="tag">Creativity</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Professional Profile</p>
+          <h2>My <span class="gold">CV.</span></h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <p class="body-copy" style="margin-bottom: 25px;">
+          My CV will provide a more detailed overview of my
+          education, skills, leadership experience and projects.
+          A downloadable copy will be added here.
+        </p>
+
+        <a class="button" href="#contact">Request My CV</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Let's Start a <span class="gold">Conversation.</span></h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="contact-box">
+          <p>
+            Have a professional opportunity, collaboration idea
+            or communication project in mind? Feel free to reach out.
+          </p>
+
+          <div class="contact-details">
+            <p>
+              <strong class="gold">Email:</strong>
+              akolbireshawn19@gmail.com
+            </p>
+
+            <p>
+              <strong class="gold">WhatsApp:</strong>
+              +233 50 812 8331
+            </p>
+          </div>
+
+          <div class="buttons">
+            <a
+              class="button primary"
+              href="mailto:akolbireshawn19@gmail.com?subject=Professional%20Enquiry"
+            >
+              Email Me
             </a>
-        </p>
 
-        <p style="margin-top:12px;">
-            <strong>Location:</strong> Ghana
-        </p>
+            <a
+              class="button"
+              href="https://wa.me/233508128331"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <a class="button" href="#home" style="margin-top:20px;">
-            Back to the Sky ↑
-        </a>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        &copy; <span id="year"></span>
+        Apambila Shawn Akolbire.
+        Built with purpose and <span>ambition.</span>
+      </p>
     </div>
-</section>
+  </footer>
 
-</main>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
-<footer>
-    <p>© <span id="year"></span> Apambila Shawn Akolbire.</p>
-    <p>Dream · Communicate · Create · Impact</p>
-</footer>
-
-<script>
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
-<style>
-/* CELESTIAL GLASS — SHAWN AKOLBIRE */
-
-:root {
-  --celestial-blue: #9bdcff;
-  --celestial-violet: #c9b6ff;
-  --glass-white: rgba(255, 255, 255, 0.12);
-  --glass-border: rgba(255, 255, 255, 0.28);
-}
-
-body {
-  background-color: #07172d;
-  background-image:
-    radial-gradient(ellipse at 15% 10%, rgba(83, 159, 255, 0.22), transparent 45%),
-    radial-gradient(ellipse at 85% 35%, rgba(177, 128, 255, 0.16), transparent 40%);
-  background-attachment: fixed;
-}
-
-header,
-nav,
-section,
-footer,
-.card,
-.button {
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-header {
-  background: rgba(8, 24, 52, 0.76) !important;
-  border-bottom: 1px solid var(--glass-border);
-}
-
-nav a {
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--celestial-blue);
-  text-shadow: 0 0 16px rgba(155, 220, 255, 0.8);
-}
-
-section {
-  position: relative;
-  border-color: var(--glass-border);
-}
-
-section:not(:first-child) {
-  margin: 28px 0;
-  padding: 30px;
-  border: 1px solid var(--glass-border);
-  border-radius: 26px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.025)
-  );
-  box-shadow:
-    0 18px 50px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-h1, h2, h3 {
-  text-shadow: 0 0 28px rgba(155, 220, 255, 0.14);
-}
-
-h2 {
-  color: var(--celestial-blue);
-}
-
-.button,
-a.button {
-  border: 1px solid rgba(255, 255, 255, 0.38);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.22),
-    rgba(155, 220, 255, 0.09)
-  );
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.16),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.button:hover,
-a.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 34px rgba(92, 177, 255, 0.22);
-}
-
-footer {
-  border-top: 1px solid var(--glass-border);
-  background: rgba(8, 24, 52, 0.45);
-}
-
-::selection {
-  color: #07172d;
-  background: var(--celestial-blue);
-}
-
-@media (max-width: 600px) {
-  section:not(:first-child) {
-    padding: 22px 18px;
-    border-radius: 20px;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  h1 {
-    animation: celestialGlow 5s ease-in-out infinite alternate;
-  }
-
-  @keyframes celestialGlow {
-    from {
-      text-shadow: 0 0 12px rgba(155, 220, 255, 0.08);
-    }
-    to {
-      text-shadow: 0 0 28px rgba(155, 220, 255, 0.3);
-    }
-  }
-}
-</style>
 </body>
-</html>
+              </html>
