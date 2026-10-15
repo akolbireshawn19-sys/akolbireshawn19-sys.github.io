@@ -1,635 +1,266 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Apambila Shawn Akolbire | PR & Communications</title>
-
-  <meta name="description"
-        content="The professional portfolio of Apambila Shawn Akolbire, an aspiring Public Relations professional interested in communications, leadership and creative strategy.">
-
-  <meta name="theme-color" content="#080808">
-
-  <style>
-    :root {
-      --black: #080808;
-      --dark: #111111;
-      --gold: #d4af37;
-      --light-gold: #f3d77a;
-      --white: #f7f5ef;
-      --muted: #b8b5ad;
-      --border: rgba(212, 175, 55, 0.25);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(8, 8, 8, 0.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
-
-    nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      color: var(--gold);
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.9rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      padding: 90px 0;
-      background:
-        radial-gradient(
-          ellipse at 85% 20%,
-          rgba(212, 175, 55, 0.13),
-          transparent 45%
-        );
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(2.7rem, 7vw, 5.5rem);
-      line-height: 1.08;
-      max-width: 850px;
-      margin-bottom: 25px;
-    }
-
-    .gold {
-      color: var(--gold);
-    }
-
-    .hero-description {
-      max-width: 680px;
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin-bottom: 32px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 24px;
-      border: 1px solid var(--gold);
-      border-radius: 4px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .button.primary {
-      background: var(--gold);
-      color: #080808;
-    }
-
-    .button:hover {
-      background: var(--light-gold);
-      color: #080808;
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 85px 0;
-      scroll-margin-top: 75px;
-    }
-
-    section:nth-of-type(even) {
-      background: var(--dark);
-    }
-
-    .section-heading {
-      margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 10px;
-    }
-
-    .section-heading p,
-    .body-copy {
-      color: var(--muted);
-      max-width: 750px;
-    }
-
-    .gold-line {
-      width: 65px;
-      height: 3px;
-      background: var(--gold);
-      margin-top: 15px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 35px;
-      align-items: start;
-    }
-
-    .info-card,
-    .card {
-      background: #141414;
-      padding: 26px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-    }
-
-    .info-card h3,
-    .card h3 {
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .info-card p,
-    .card p {
-      color: var(--muted);
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      transition: border-color 0.3s, transform 0.3s;
-    }
-
-    .card:hover {
-      border-color: var(--gold);
-      transform: translateY(-4px);
-    }
-
-    .tag {
-      display: inline-block;
-      color: var(--gold);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      margin-top: 15px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .skill {
-      padding: 10px 16px;
-      background: #171717;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      color: var(--white);
-    }
-
-    .contact-box {
-      background: #141414;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 35px;
-      max-width: 760px;
-    }
-
-    .contact-box p {
-      color: var(--muted);
-      margin-bottom: 25px;
-    }
-
-    .contact-details {
-      margin-bottom: 25px;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-details p {
-      margin: 10px 0;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 30px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    footer span {
-      color: var(--gold);
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        padding: 16px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        gap: 12px 16px;
-      }
-
-      .hero {
-        min-height: 75vh;
-        padding: 70px 0;
-      }
-
-      .about-grid,
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-
-      .contact-box {
-        padding: 24px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="The personal portfolio of Apambila Shawn Akolbire, an aspiring Public Relations professional passionate about communication, leadership and creative impact.">
+<title>Apambila Shawn Akolbire | Communications & PR</title>
+<style>
+:root{--black:#080808;--panel:#141414;--gold:#d4af37;--cream:#f7f3e9;--muted:#b7b4ac}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--cream);line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;object-fit:cover}
+.container{width:min(1120px,90%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#080808f2;border-bottom:1px solid #ffffff18;backdrop-filter:blur(12px)}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:20px;font-weight:800;letter-spacing:1px}
+.logo span,.gold{color:var(--gold)}
+.navlinks{display:flex;gap:23px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.navlinks a:hover{color:var(--gold)}
+.hero{padding:75px 0 85px;background:radial-gradient(ellipse at 80% 30%,#d4af3718,transparent 50%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.05;letter-spacing:-2px;margin:20px 0}
+h1 span{color:var(--gold)}
+.hero p,.section-intro{color:var(--muted);font-size:17px;max-width:590px}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
+.btn{display:inline-block;padding:12px 20px;border:1px solid var(--gold);font-size:13px;font-weight:bold;transition:.2s}
+.btn.primary{background:var(--gold);color:#111}
+.btn:hover{transform:translateY(-2px);opacity:.88}
+.hero-image{position:relative;padding:0 0 18px 18px}
+.hero-image:before{content:"";position:absolute;inset:18px 18px 0 0;border:1px solid var(--gold)}
+.hero-image img{position:relative;height:480px;object-position:center 30%;border-radius:2px}
+.photo-note{position:absolute;bottom:0;right:0;background:var(--gold);color:#111;padding:12px 18px;font-size:12px;font-weight:bold}
+.quickfacts{border-top:1px solid #ffffff20;border-bottom:1px solid #ffffff20;padding:20px 0}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+.fact strong{display:block;color:var(--gold);font-size:16px}
+.fact span{font-size:12px;color:var(--muted)}
+section{padding:78px 0}
+.section-head{margin-bottom:35px}
+.kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:bold}
+h2{font-size:clamp(29px,4vw,43px);line-height:1.2;margin:9px 0 13px}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
+.about-image img{height:390px;object-position:center 25%}
+.about-copy p{color:var(--muted);margin:13px 0}
+.taglist{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+.tag{border:1px solid #d4af3748;color:var(--gold);padding:7px 11px;font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:1px solid #ffffff12;overflow:hidden}
+.card img{height:230px;transition:transform .35s}
+.card:hover img{transform:scale(1.035)}
+.card-body{padding:21px}
+.card .number{color:var(--gold);font-size:12px;letter-spacing:2px}
+.card h3{font-size:20px;margin:7px 0}
+.card p{font-size:14px;color:var(--muted)}
+.education{background:#101010}
+.edu-card{padding:27px;border-left:2px solid var(--gold);background:var(--panel);margin-bottom:17px}
+.edu-card small{color:var(--gold);text-transform:uppercase;letter-spacing:2px}
+.edu-card h3{font-size:21px;margin:8px 0}
+.edu-card p{color:var(--muted);font-size:14px}
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.skill{padding:18px;border:1px solid #ffffff18;background:var(--panel)}
+.skill strong{display:block;margin-bottom:5px}
+.skill span{font-size:13px;color:var(--muted)}
+.project-card{padding:25px;border:1px solid #d4af3745;background:linear-gradient(145deg,#171717,#0b0b0b)}
+.project-card p{font-size:14px;color:var(--muted);margin:10px 0 18px}
+.project-card .label{color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.project-card h3{font-size:21px;margin-top:9px}
+.contact{background:linear-gradient(120deg,#18150b,#0a0a0a 70%)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.contact p{color:var(--muted);margin:12px 0}
+.contact-detail{padding:18px;border-bottom:1px solid #ffffff20}
+.contact-detail small{display:block;color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:11px}
+.contact-detail a{overflow-wrap:anywhere}
+footer{padding:25px 0;border-top:1px solid #ffffff18;color:var(--muted);font-size:12px}
+.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+footer span{color:var(--gold)}
+@media(max-width:760px){
+nav{align-items:flex-start;flex-direction:column;padding:16px 0}
+.navlinks{gap:12px 17px}
+.hero{padding:48px 0 55px}
+.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}
+.hero-image{max-width:500px}
+.hero-image img{height:390px}
+.facts{gap:8px}
+.fact strong{font-size:13px}
+.fact span{font-size:10px}
+section{padding:57px 0}
+.cards{grid-template-columns:1fr}
+.card img{height:270px}
+.about-image img{height:340px}
+.skill-grid{grid-template-columns:1fr}
+h1{letter-spacing:-1px}
+}
+</style>
 </head>
-
 <body>
+<header>
+<nav class="container">
+<a class="logo" href="#home">SHAWN<span>.</span></a>
+<div class="navlinks">
+<a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#leadership">Leadership</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
 
-  <header>
-    <nav class="container">
-      <a class="logo" href="#home">SA.</a>
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Aspiring PR Professional · Ghana</div>
+<h1>Apambila<br>Shawn <span>Akolbire.</span></h1>
+<p>Ideas matter. Communication gives them power. I am an aspiring Public Relations professional passionate about storytelling, leadership and creating meaningful impact through communication.</p>
+<div class="actions">
+<a class="btn primary" href="#about">DISCOVER MY STORY ↘</a>
+<a class="btn" href="#contact">LET'S CONNECT ↗</a>
+</div>
+</div>
+<div class="hero-image">
+<img src="IMG-20260807-WA0006.jpg" alt="Apambila Shawn Akolbire standing in a white and patterned shirt" fetchpriority="high">
+<div class="photo-note">COMMUNICATION · CHARACTER · IMPACT</div>
+</div>
+</div>
+</section>
 
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#leadership">Leadership</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<div class="quickfacts">
+<div class="container facts">
+<div class="fact"><strong>PUBLIC RELATIONS</strong><span>My academic direction</span></div>
+<div class="fact"><strong>LEADERSHIP</strong><span>My foundation</span></div>
+<div class="fact"><strong>CREATIVITY</strong><span>My growing strength</span></div>
+</div>
+</div>
 
-  <main>
+<section id="about">
+<div class="container about-grid">
+<div class="about-image">
+<img src="IMG-20260927-WA0007.jpg" alt="Portrait of Apambila Shawn Akolbire in a blue traditional outfit" loading="lazy">
+</div>
+<div class="about-copy">
+<div class="kicker">01 / About me</div>
+<h2>A voice with purpose.<br><span class="gold">A future with vision.</span></h2>
+<p>I am Apambila Shawn Akolbire, an aspiring Public Relations professional with an interest in how communication shapes perceptions, builds trust and connects people.</p>
+<p>My journey is guided by a willingness to learn, a commitment to personal growth and a desire to use communication to make a positive difference. I aim to develop the skills to plan campaigns, tell compelling stories and build strong relationships between organisations and their audiences.</p>
+<p>I believe professionalism begins with listening, grows through learning and shows itself through action.</p>
+<div class="taglist"><span class="tag">Strategic Communication</span><span class="tag">Storytelling</span><span class="tag">Leadership</span><span class="tag">Creative Thinking</span></div>
+</div>
+</div>
+</section>
 
-    <section class="hero" id="home">
-      <div class="container">
-        <p class="eyebrow">Communication · Creativity · Leadership</p>
+<section class="education" id="education">
+<div class="container">
+<div class="section-head">
+<div class="kicker">02 / My journey</div>
+<h2>Education & Growth</h2>
+<p class="section-intro">Building the knowledge and practical abilities to become a thoughtful communications professional.</p>
+</div>
+<div class="edu-card">
+<small>University education</small>
+<h3>University of Media, Arts and Communication (UniMAC)</h3>
+<p>Bachelor in Communication Studies — Public Relations option.</p>
+<p>Developing an understanding of media, communication, public relations and professional practice.</p>
+</div>
+<div class="edu-card">
+<small>Secondary education</small>
+<h3>Azoka Memorial Senior High School</h3>
+<p>The foundation of my academic journey, personal development and interest in leadership.</p>
+</div>
+</div>
+</section>
 
-        <h1>
-          Apambila<br>
-          Shawn <span class="gold">Akolbire.</span>
-        </h1>
+<section id="leadership">
+<div class="container">
+<div class="section-head">
+<div class="kicker">03 / Leadership</div>
+<h2>Learning to lead through service.</h2>
+<p class="section-intro">Leadership starts with responsibility, teamwork and the willingness to contribute.</p>
+</div>
+<div class="cards">
+<article class="card">
+<img src="IMG-20260927-WA0012.jpg" alt="Apambila Shawn Akolbire in a white and plaid shirt" loading="lazy">
+<div class="card-body"><div class="number">01 — EXPERIENCE</div><h3>Sports Prefect</h3><p>My experience as a sports prefect in primary school introduced me to responsibility, cooperation and helping others work toward a common goal.</p></div>
+</article>
+<article class="card">
+<div class="card-body"><div class="number">02 — MINDSET</div><h3>Teamwork & Responsibility</h3><p>I value listening to different perspectives, being dependable and recognising that good leadership is demonstrated through actions.</p></div>
+</article>
+<article class="card">
+<div class="card-body"><div class="number">03 — ASPIRATION</div><h3>Student Leadership</h3><p>I am interested in opportunities that help me grow in public speaking, student engagement, advocacy and responsible leadership.</p></div>
+</article>
+</div>
+</div>
+</section>
 
-        <p class="hero-description">
-          Aspiring Public Relations Professional &
-          Public Relations and Communications Consultant.
-          Passionate about meaningful communication,
-          strategic thinking, leadership and building
-          connections that make a difference.
-        </p>
+<section class="education" id="skills">
+<div class="container">
+<div class="section-head">
+<div class="kicker">04 / Professional interests</div>
+<h2>What I am building.</h2>
+<p class="section-intro">Areas I am passionate about developing through study, practice and experience.</p>
+</div>
+<div class="skill-grid">
+<div class="skill"><strong>Public Relations</strong><span>Reputation, relationships and audience understanding.</span></div>
+<div class="skill"><strong>Content & Storytelling</strong><span>Communicating ideas clearly and creatively.</span></div>
+<div class="skill"><strong>Media & Communication</strong><span>Exploring how messages influence people and society.</span></div>
+<div class="skill"><strong>Leadership & Public Speaking</strong><span>Growing confidence, teamwork and presentation skills.</span></div>
+</div>
+</div>
+</section>
 
-        <div class="buttons">
-          <a class="button primary" href="#about">Discover My Story</a>
-          <a class="button" href="#contact">Let's Connect</a>
-        </div>
-      </div>
-    </section>
+<section id="projects">
+<div class="container">
+<div class="section-head">
+<div class="kicker">05 / Creative direction</div>
+<h2>Ideas in development.</h2>
+<p class="section-intro">A space for future campaigns, class assignments and communication projects. These are project directions, not claims of completed client work.</p>
+</div>
+<div class="cards">
+<article class="project-card"><div class="label">Campaign concept 01</div><h3>Positive Mental Health Awareness</h3><p>A potential awareness campaign exploring clear messaging, stigma reduction and ways to encourage people to seek reliable support.</p><a class="gold" href="mailto:akolbireshawn19@gmail.com?subject=Mental%20Health%20Campaign%20Concept">Discuss this idea ↗</a></article>
+<article class="project-card"><div class="label">Campaign concept 02</div><h3>Respect & Domestic Violence Awareness</h3><p>A potential communications concept focused on respectful relationships, public awareness and directing people toward appropriate support.</p><a class="gold" href="mailto:akolbireshawn19@gmail.com?subject=Awareness%20Campaign%20Concept">Discuss this idea ↗</a></article>
+<article class="project-card"><div class="label">Professional development</div><h3>Media & Public Relations Practice</h3><p>Building a portfolio of future press releases, media statements, communication plans and creative campaign materials.</p><a class="gold" href="mailto:akolbireshawn19@gmail.com?subject=PR%20Portfolio">Connect with me ↗</a></article>
+</div>
+</div>
+</section>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">A Little About Me</p>
-          <h2>Purpose. <span class="gold">Vision. Impact.</span></h2>
-          <div class="gold-line"></div>
-        </div>
+<section class="education" id="cv">
+<div class="container contact-grid">
+<div><div class="kicker">06 / Professional profile</div><h2>My next chapter<br><span class="gold">is taking shape.</span></h2><p class="section-intro">My CV will bring together my education, leadership experience, developing skills and future professional opportunities.</p></div>
+<div class="project-card"><div class="label">Curriculum vitae</div><h3>Request my CV</h3><p>Contact me by email to request my current CV or discuss opportunities for learning, collaboration and professional growth.</p><a class="btn primary" href="mailto:akolbireshawn19@gmail.com?subject=Request%20for%20CV">REQUEST MY CV ↗</a></div>
+</div>
+</section>
 
-        <div class="about-grid">
-          <div class="body-copy">
-            <p>
-              I am Apambila Shawn Akolbire, an aspiring Public
-              Relations professional with a strong interest in
-              communication, public engagement, leadership and
-              creative problem-solving.
-            </p>
+<section class="contact" id="contact">
+<div class="container contact-grid">
+<div>
+<div class="kicker">07 / Get in touch</div>
+<h2>Good conversations<br>start with <span class="gold">a connection.</span></h2>
+<p>Interested in communication, student leadership, creative ideas or potential collaboration? I'd be glad to connect and learn from the conversation.</p>
+<div class="actions">
+<a class="btn primary" href="mailto:akolbireshawn19@gmail.com">EMAIL ME ↗</a>
+<a class="btn" href="https://wa.me/233508128331" target="_blank" rel="noopener">MESSAGE ON WHATSAPP ↗</a>
+</div>
+</div>
+<div>
+<div class="contact-detail"><small>Email</small><a href="mailto:akolbireshawn19@gmail.com">akolbireshawn19@gmail.com</a></div>
+<div class="contact-detail"><small>WhatsApp</small><a href="https://wa.me/233508128331" target="_blank" rel="noopener">+233 50 812 8331</a></div>
+<div class="contact-detail"><small>Based in</small><span>Ghana</span></div>
+<div class="contact-detail"><small>Professional interest</small><span>Public Relations & Communication</span></div>
+</div>
+</div>
+</section>
+</main>
 
-            <br>
-
-            <p>
-              I believe communication is more than sharing
-              information. It is about building trust, understanding
-              people, managing relationships and communicating
-              ideas clearly and responsibly.
-            </p>
-
-            <br>
-
-            <p>
-              My goal is to develop the knowledge and practical
-              experience needed to contribute to organisations,
-              communities and brands through effective
-              communication and thoughtful public relations.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <h3>My Professional Direction</h3>
-            <p>Public Relations</p>
-            <p>Corporate Communications</p>
-            <p>Media and Public Engagement</p>
-            <p>Leadership and Advocacy</p>
-            <p>Creative Campaign Development</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">My Academic Journey</p>
-          <h2>Education & <span class="gold">Growth.</span></h2>
-          <div class="gold-line"></div>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>University Education</h3>
-            <p><strong>University of Media, Arts and Communication (UniMAC)</strong></p>
-            <p>
-              Bachelor in Communication Studies
-              — Public Relations option.
-            </p>
-            <span class="tag">Communication Studies</span>
-          </article>
-
-          <article class="card">
-            <h3>Secondary Education</h3>
-            <p><strong>Azoka Memorial Senior High School</strong></p>
-            <p>
-              My secondary education contributed to the
-              academic foundation and personal development
-              that I continue to build upon.
-            </p>
-            <span class="tag">Academic Foundation</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="leadership">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Leadership & Service</p>
-          <h2>Leading with <span class="gold">Purpose.</span></h2>
-          <div class="gold-line"></div>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>Sports Prefect</h3>
-            <p>
-              Served as a sports prefect in primary school,
-              gaining an early introduction to responsibility,
-              teamwork and student leadership.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Student Leadership</h3>
-            <p>
-              Interested in student representation, constructive
-              dialogue, responsible leadership and initiatives
-              that contribute positively to the student community.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Areas of Interest</p>
-          <h2>Skills & <span class="gold">Development.</span></h2>
-          <div class="gold-line"></div>
-        </div>
-
-        <p class="body-copy">
-          I am developing my abilities in the following areas
-          as I continue my academic and professional journey.
-        </p>
-
-        <div class="skills">
-          <span class="skill">Public Relations</span>
-          <span class="skill">Written Communication</span>
-          <span class="skill">Public Speaking</span>
-          <span class="skill">Teamwork</span>
-          <span class="skill">Leadership</span>
-          <span class="skill">Creative Thinking</span>
-          <span class="skill">Media Literacy</span>
-          <span class="skill">Strategic Communication</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">My Work</p>
-          <h2>Projects & <span class="gold">Portfolio.</span></h2>
-          <div class="gold-line"></div>
-        </div>
-
-        <p class="body-copy" style="margin-bottom: 30px;">
-          This section will grow as I complete practical work,
-          university assignments and communications projects.
-        </p>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>Public Relations Campaigns</h3>
-            <p>
-              A space for campaign concepts, audience research,
-              communication plans and public engagement ideas.
-            </p>
-            <span class="tag">Campaign Development</span>
-          </article>
-
-          <article class="card">
-            <h3>Media & Communication Projects</h3>
-            <p>
-              A collection of relevant academic assignments,
-              media analysis and communication-related work.
-            </p>
-            <span class="tag">Media & Communication</span>
-          </article>
-
-          <article class="card">
-            <h3>Leadership & Advocacy</h3>
-            <p>
-              A place to document leadership activities,
-              student initiatives and responsible advocacy.
-            </p>
-            <span class="tag">Leadership</span>
-          </article>
-
-          <article class="card">
-            <h3>Creative Concepts</h3>
-            <p>
-              Ideas for branding, storytelling, public awareness
-              and effective communication.
-            </p>
-            <span class="tag">Creativity</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="cv">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Professional Profile</p>
-          <h2>My <span class="gold">CV.</span></h2>
-          <div class="gold-line"></div>
-        </div>
-
-        <p class="body-copy" style="margin-bottom: 25px;">
-          My CV will provide a more detailed overview of my
-          education, skills, leadership experience and projects.
-          A downloadable copy will be added here.
-        </p>
-
-        <a class="button" href="#contact">Request My CV</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Get in Touch</p>
-          <h2>Let's Start a <span class="gold">Conversation.</span></h2>
-          <div class="gold-line"></div>
-        </div>
-
-        <div class="contact-box">
-          <p>
-            Have a professional opportunity, collaboration idea
-            or communication project in mind? Feel free to reach out.
-          </p>
-
-          <div class="contact-details">
-            <p>
-              <strong class="gold">Email:</strong>
-              akolbireshawn19@gmail.com
-            </p>
-
-            <p>
-              <strong class="gold">WhatsApp:</strong>
-              +233 50 812 8331
-            </p>
-          </div>
-
-          <div class="buttons">
-            <a
-              class="button primary"
-              href="mailto:akolbireshawn19@gmail.com?subject=Professional%20Enquiry"
-            >
-              Email Me
-            </a>
-
-            <a
-              class="button"
-              href="https://wa.me/233508128331"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>
-        &copy; <span id="year"></span>
-        Apambila Shawn Akolbire.
-        Built with purpose and <span>ambition.</span>
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
-
+<footer>
+<div class="container footer-row">
+<div>© <span id="year"></span> Apambila Shawn Akolbire. All rights reserved.</div>
+<div>Built with purpose. Styled in <span>black & gold.</span></div>
+<a href="#home">BACK TO TOP ↑</a>
+</div>
+</footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
-              </html>
+</html>
